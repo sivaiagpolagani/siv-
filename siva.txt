@@ -1,1 +1,144 @@
-this is my first project
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 10em 50vh auto 10em;
+    grid-template-columns: 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
+    grid-template-areas: "header header header header"
+    "hero hero hero hero"
+    ". main aside ."
+    "footer footer footer footer";
+    grid-column-gap: 1rem;
+}
+header {
+    grid-area: header;
+    background-color: #252525;
+    color: #e9d20f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero {
+    grid-area: hero;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-hero-bg.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main {
+    grid-area: main;
+}
+aside {
+    grid-area: aside;
+    background-color: #e8e8e8;
+    padding: 2rem;
+}
+footer {
+    grid-area: footer;
+    background-color: #252525;
+    color: #e9d20f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.side-heading {
+    font-size: 3.7rem;
+    margin: 0;
+}
+aside p {
+    letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+}
+.card-img {
+    grid-area: img;
+    max-width: 100%;
+}
+.card-content {
+    grid-area: cardcontent;
+    margin: 0;
+    letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+}
+.card-content a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #e9d20f;
+    border: #e9d20f solid 1px;
+    padding: .5rem;
+}
+.blog-post {
+    grid-area: post;
+    margin: 0;
+}
+.card {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-rows: min-content auto;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "img post"
+    "img cardcontent";
+    padding: 1rem;
+    margin: 2rem 2rem 2rem 0rem;
+}
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid View</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=widyh-device ,initial-scale=1.0">
+        <link rel="stylesheet" href="css/grid.css">
+    </head>
+    <body>
+        <header>
+            <h1 class="header-title">My Portfolio</h1>
+        </header>
+        <div class="hero">
+            <h1 class="hero-title">This is shiva</h1>
+            <p class="hero-subtitle">Web Developer</p>
+        </div>
+        <main>
+            <h1 class="blog-title">Blog-Heading</h1>
+            <div class="card">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-card-img-01.jpg" class="card-img">
+                <h2 class="blog-post">Blog-Post</h2>
+                <div class="card-content">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, repellat neque harum
+                     obcaecati deserunt, nobis molestias corporis animi assumenda, ullam sunt delectus eveniet quo tempore at illo. Iste, officiis ducimus?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, repellat neque harum
+                     obcaecati deserunt, nobis molestias corporis animi assumenda, ullam sunt delectus eveniet quo tempore at illo. Iste, officiis ducimus?  </p>
+                     <a href="#">Read More...</a>
+                </div>
+            </div>
+            <div class="card">
+                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-card-img-01.jpg" class="card-img">
+                    <h2 class="blog-post">Blog-Post</h2>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, repellat neque harum
+                         obcaecati deserunt, nobis molestias corporis animi assumenda, ullam sunt delectus eveniet quo tempore at illo. Iste, officiis ducimus?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, repellat neque harum
+                         obcaecati deserunt, nobis molestias corporis animi assumenda, ullam sunt delectus eveniet quo tempore at illo. Iste, officiis ducimus?  </p>
+                         <a href="#">Read More...</a>
+                    </div>
+                </div>
+        </main>
+        <aside>
+            <h1 class="side-heading">List Items</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, totam asperiores. Dicta aliquid
+                 omnis quasi, sapiente aliquam mollitia officia deserunt maxime consequuntur velit et id officiis culpa perferendis provident molestias? 
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod culpa harum, veritatis possimus at dicta tempore enim laboriosam ad 
+                 blanditiis aut commodi perferendis iste adipisci corrupti. Praesentium, quibusdam enim.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, totam asperiores. Dicta aliquid
+                 omnis quasi, sapiente aliquam mollitia officia deserunt maxime consequuntur velit et id officiis culpa perferendis provident molestias? 
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod culpa harum, veritatis possimus at dicta tempore enim laboriosam ad 
+                 blanditiis aut commodi perferendis iste adipisci corrupti. Praesentium, quibusdam enim.</p>
+        </aside>
+        <footer>
+            <h1 class="footer-title">The - End</h1>
+        </footer>
+    </body>
+</html>
