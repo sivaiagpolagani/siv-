@@ -1,0 +1,148 @@
+/* CSS */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    z-index: 0;
+}
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.row::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+[class*="col-"] {
+    width: 100%;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.logo > img {
+   width: 30%;
+   height: auto;
+   margin-left: 20%;
+}
+label {
+    display: none;
+}
+#toggle {
+    display: none;
+}
+ul > li > a {
+    text-decoration: none;
+    color: #000;
+}
+ul > li {
+    list-style-type: none;
+    display: inline-block;
+    padding: inherit;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: aquamarine;
+}
+@media (min-width:600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media (min-width:768px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media (max-width:600px) {
+    .logo > img {
+        max-width: 25%;
+        margin-left: 10%;
+    }
+    label {
+        display: block;
+        font-size: 30px;
+        font-weight: 900;
+        right: 26px;
+        top:35px;
+        position: absolute;
+    }
+    nav {
+        align-items: flex-start;
+    }
+    ul {
+        display: none;
+    }
+    ul > li {
+        width: 100%;
+        text-align: center;
+        line-height: 50px;
+        padding: 0;
+        margin: 0;
+        border-top: .5px solid darkblue;
+    }
+    #toggle:checked + ul {
+        display: block;
+        padding: 0px;
+    }
+   /* ul > li:nth-child(5) {
+        background-color: rgb(251, 251, 253) !important;
+        padding: 0px !important;
+        border-radius: 5px;
+        margin-left: 0px !important;
+    } */
+    a.fade.un {
+        color: #000 !important;
+    }
+    div#slider figure img {
+        width: 20%;
+        float: left;
+        height: 237px !important;
+    }
+}
+
+
+/*HTML*/
+
+ <nav>
+                <div class="logo"><img src="img/logo.png" class="fade"></div>
+                <label for="toggle">&#9776</label>
+                <input type="checkbox" id="toggle">
+                    <ul>
+                        <li><a href="index.html" class="fade un">HOME</a></li>
+                        <li><a href="aboutus.html" class="fade un">ABOUT</a></li>
+                        <li><a href="gallery.html" class="fade un">GALLERY</a></li>
+                        <li><a href="members.html" class="fade un">MEMBERS</a></li>
+                        <li><a href="login.html" class="fade un" style="color: #000;margin-left: 5px;">LOGIN</a></li>
+                    </ul>
+            </nav>
